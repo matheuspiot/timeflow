@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pro', sans-serif;
+    background: #070417;
+    color: white;
+    background-image: url(/Gradient.svg);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-left: -14%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(-120deg);
+    transform-origin: 0 0;
+    overflow: hidden; /* Garante que nada saia dos limites */
+}
+
+.shape1, .shape2, .shape3 {
+    position: absolute;
+    filter: blur(80px);
+    flex-shrink: 0;
+}
+
+.shape1 {
+    width: 441.351px;
+    height: 670.357px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-120deg);
+    background: #2F2F2F; /* Definido em fill no SVG */
+}
+
+.shape2 {
+    width: 501.098px;
+    height: 435.83px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-120deg);
+    background: #A62CC5; /* Definido em fill no SVG */
+}
+
+.shape3 {
+    width: 358px;
+    height: 540.367px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-120deg);
+}
+
+.overlay {
+    width: 390px;
+    height: 844px;
+    left: 4.52px;
+    top: -1071.78px;
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(200px);
+}
+
+.timer-display {
+    position: absolute;
+    left: 85px;
+    top: 182px;
+    font-size: 48px;
+    font-weight: 510;
+    line-height: 32px;
+    letter-spacing: 2px;
+}
+
+.app-name {
+    position: absolute;
+    left: 139px;
+    top: 142px;
+    font-size: 24px;
+    font-weight: 510;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.70);
+}
+
+.controls {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    left: 80px;
+    top: 346px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.button.track {
+    color:#BDBDBD;
+    line-height: 20px;
+    margin-left: 5px;
+    word-wrap: break-word;
+    background-image: url(/Icon.svg)
+}
+
+.button.start {
+    background: #A62CC5;
+    margin-left: 5px;
+    color: white;
+}
+
+.button.stop {
+    color: white;
+    background-image: url(/Icon\ parar.svg);
+    align-content: center;
+    align-items: center;
+    margin-left: 88px;
+}
+
+.button.reset {
+    color:#BDBDBD;
+    line-height: 20px;
+    margin-left: 88px;
+    word-wrap: break-word;
+    background-image: url(/Icon.svg)
+}
+
+.time-list {
+    position: absolute;
+    left: 88px;
+    top: 453px;
+}
+
+.time-item {
+    width: 210px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-label {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+}
+
+.time-value {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+}
+
+.header {
+    position: absolute;
+    width: 375px;
+    height: 44px;
+    top: 0;
+}
+
+.clock-display {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.clock-time {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+}
